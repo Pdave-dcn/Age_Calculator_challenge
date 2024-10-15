@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+}
+
+$color-purple: hsl(259, 100%, 65%);
+$color-red: hsl(0, 100%, 67%);
+$color-off-white: hsl(0, 0%, 94%);
+$color-light-gray: hsl(0, 0%, 86%);
+$color-smokey-gray: hsl(0, 1%, 44%);
+$color-off-black: hsl(0, 0%, 8%);
+
+$input-font-size: 32px;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: $color-off-white;
+}
+
+.calculator {
+  position: relative;
+  background-color: white;
+  margin-top: 90px;
+  padding: 25px;
+  padding-right: 60px;
+  border-radius: 15px;
+  border-bottom-right-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inputs-container {
+  display: flex;
+  border-bottom: 1px solid $color-off-white;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  gap: 34px;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-weight: 600;
+      font-size: 8px;
+      letter-spacing: 2px;
+      color: $color-smokey-gray;
+    }
+
+    input {
+      padding: 8px;
+      width: 60px;
+      border: 1px solid $color-off-white;
+      font-weight: 600;
+      border-radius: 5px;
+      color: $color-off-black;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $color-purple;
+      }
+
+      &::placeholder {
+        color: $color-smokey-gray;
+      }
+    }
+
+    .js-error-input {
+      border: 1px solid $color-red;
+    }
+
+    .js-error-label {
+      color: $color-red;
+    }
+  }
+}
+
+.error {
+  color: $color-red;
+  font-size: 8px;
+  margin-top: 5px;
+}
+
+.btn {
+  .svg-button {
+    position: absolute;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    top: 85px;
+    right: 30px;
+
+    & img {
+      display: block;
+      background-color: $color-purple;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      border-radius: 100%;
+      cursor: pointer;
+
+      &:active {
+        background-color: $color-off-black;
+      }
+    }
+  }
+}
+
+.render-container {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  color: $color-off-black;
+  margin-top: 15px;
+  span {
+    color: $color-purple;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 380px) {
+  .calculator {
+    padding: 25px;
+  }
+
+  .btn {
+    .svg-button {
+      right: 125px;
+      top: 99px;
+
+      & img {
+        cursor: auto;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .inputs-container {
+    padding-right: 0;
+    padding-bottom: 45px;
+
+    & > :last-child {
+      margin-left: 0px;
+    }
+
+    .inputs {
+      input {
+        width: 40px;
+        cursor: auto;
+      }
+    }
+  }
+
+  .render-container {
+    margin-top: 50px;
+    margin-bottom: 17px;
+    font-size: 2.6rem;
+  }
+}

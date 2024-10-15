@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.calculator {
+  position: relative;
+  background-color: white;
+  margin-top: 90px;
+  padding: 25px;
+  padding-right: 60px;
+  border-radius: 15px;
+  border-bottom-right-radius: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inputs-container {
+  display: flex;
+  border-bottom: 1px solid hsl(0, 0%, 94%);
+  padding-bottom: 30px;
+  padding-right: 40px;
+  gap: 34px;
+}
+.inputs-container .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.inputs-container .inputs label {
+  font-weight: 600;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+}
+.inputs-container .inputs input {
+  padding: 8px;
+  width: 60px;
+  border: 1px solid hsl(0, 0%, 94%);
+  font-weight: 600;
+  border-radius: 5px;
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+.inputs-container .inputs input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.inputs-container .inputs input::-moz-placeholder {
+  color: hsl(0, 1%, 44%);
+}
+.inputs-container .inputs input::placeholder {
+  color: hsl(0, 1%, 44%);
+}
+.inputs-container .inputs .js-error-input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+.inputs-container .inputs .js-error-label {
+  color: hsl(0, 100%, 67%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+  font-size: 8px;
+  margin-top: 5px;
+}
+
+.btn .svg-button {
+  position: absolute;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  top: 85px;
+  right: 30px;
+}
+.btn .svg-button img {
+  display: block;
+  background-color: hsl(259, 100%, 65%);
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.btn .svg-button img:active {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.render-container {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  color: hsl(0, 0%, 8%);
+  margin-top: 15px;
+}
+.render-container span {
+  color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 380px) {
+  .calculator {
+    padding: 25px;
+  }
+  .btn .svg-button {
+    right: 125px;
+    top: 99px;
+  }
+  .btn .svg-button img {
+    cursor: auto;
+    width: 20px;
+    height: 20px;
+  }
+  .inputs-container {
+    padding-right: 0;
+    padding-bottom: 45px;
+  }
+  .inputs-container > :last-child {
+    margin-left: 0px;
+  }
+  .inputs-container .inputs input {
+    width: 40px;
+    cursor: auto;
+  }
+  .render-container {
+    margin-top: 50px;
+    margin-bottom: 17px;
+    font-size: 2.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */

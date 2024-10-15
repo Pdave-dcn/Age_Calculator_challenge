@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="calculator-section">
+        <div class="calculator">
+          <div class="inputs-container">
+            <div class="inputs">
+              <label for="day">DAY</label>
+              <input type="text" id="day" name="day" placeholder="DD" />
+              <div class="error"></div>
+            </div>
+            <div class="inputs">
+              <label for="month">MONTH</label>
+              <input type="text" id="month" name="month" placeholder="MM" />
+              <div class="error"></div>
+            </div>
+            <div class="inputs">
+              <label for="year">YEAR</label>
+              <input type="text" id="year" name="year" placeholder="YYYY" />
+              <div class="error"></div>
+            </div>
+          </div>
+          <div class="render-container">
+            <div class="years"><span class="js-age-years">--</span> years</div>
+            <div class="months">
+              <span class="js-age-months">--</span> months
+            </div>
+            <div class="days"><span class="js-age-days">--</span> days</div>
+          </div>
+          <div class="btn">
+            <button class="svg-button js-btn">
+              <img src="assets/images/icon-arrow.svg" alt="icon-svg" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Pdave-dcn</a>.
+      </div>
+    </main>
+    <script src="script/main.js" type="module"></script>
+  </body>
+</html>
