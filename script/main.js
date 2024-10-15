@@ -21,13 +21,3 @@ btnElement.addEventListener("click", () => {
     CalculateAndRender();
   }
 });
-
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("input", () => {
-    verifyInputs();
-
-    if (inputValid) {
-      verifyValues();
-    }
-  });
-});
