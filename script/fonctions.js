@@ -118,6 +118,10 @@ export function CalculateAndRender() {
   let monthCounter = 0;
   let dayCounter = 0;
 
+  document.querySelector(".js-age-years").innerHTML = `--`;
+  document.querySelector(".js-age-months").innerHTML = `--`;
+  document.querySelector(".js-age-days").innerHTML = `--`;
+  
   const interval = setInterval(() => {
     if (yearCounter < ageYears) {
       yearCounter++;
